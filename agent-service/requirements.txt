@@ -1,0 +1,12 @@
+fastapi==0.115.6
+uvicorn[standard]==0.32.1
+pydantic==2.10.4
+python-multipart==0.0.12
+requests==2.32.3
+setuptools>=69.0.0,<81
+langgraph==0.2.60
+langchain-google-genai==2.0.8
+langchain-text-splitters==0.3.4
+pymilvus==2.5.0
+pypdf==5.1.0
+python-dotenv==1.2.4

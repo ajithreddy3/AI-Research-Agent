@@ -1,0 +1,33 @@
+{
+  "recorded_at": "2026-11-09T21:22:20.910134+05:30",
+  "author": "Ajith Reddy",
+  "paper_title": "Sample Paper: Evidence-Based Research Assistance",
+  "question": "What are the three stages of the research assistant described in this paper?",
+  "sample_type": "synthetic demonstration paper",
+  "domain": "AI",
+  "language": "en",
+  "indexing": "UI reported Indexed successfully.",
+  "answer_markdown": [
+    "Research Assistant (Option 1)",
+    "Upload Papers",
+    "Ask Questions",
+    "Upload and index one paper",
+    "Paper PDF",
+    "Paper title",
+    "Domain",
+    "Original language",
+    "Upload + Index",
+    "Ask in English / Spanish / French / Italian",
+    "Question",
+    "Domain to search",
+    "Question language (optional)",
+    "Ask",
+    "Answer",
+    "The three stages of the research assistant workflow are:\n\nIndexing: Extracting PDF text, splitting it into chunks, creating embeddings, and storing them in a vector database.\nRetrieval: Embedding the question and searching for passages with similar meaning, filtered by the selected domain.\nGeneration: Supplying the retrieved passages to a language model to generate an answer based on the evidence.\n",
+    "Recommended Papers",
+    "\nSample Paper: Evidence-Based Research Assistance (score=0.6436)\n",
+    "References",
+    "\nSample Paper: Evidence-Based Research Assistance\n"
+  ],
+  "mocked_responses": false
+}

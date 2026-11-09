@@ -1,0 +1,37 @@
+services:
+  translator:
+    build: ./Docker-NLP
+    ports:
+      - "127.0.0.1:8000:8000"
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/healthz')"]
+      interval: 10s
+      timeout: 5s
+      retries: 6
+  agent:
+    build: ./agent-service
+    env_file: .env
+    environment:
+      MILVUS_HOST: standalone
+      TRANSLATOR_BASE_URL: http://translator:8000
+    ports:
+      - "127.0.0.1:8080:8080"
+    depends_on:
+      standalone:
+        condition: service_healthy
+      translator:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8080/healthz')"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+  frontend:
+    build: ./frontend
+    environment:
+      AGENT_BASE_URL: http://agent:8080
+    ports:
+      - "127.0.0.1:8501:8501"
+    depends_on:
+      agent:
+        condition: service_healthy

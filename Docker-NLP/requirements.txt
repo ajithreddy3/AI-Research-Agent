@@ -1,0 +1,4 @@
+fastapi==0.115.6
+uvicorn[standard]==0.32.1
+googletrans==4.0.0-rc1
+pydantic==2.10.4

@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: milvus-svc
+  namespace: option1
+spec:
+  type: ExternalName
+  externalName: milvus.milvus.svc.cluster.local
